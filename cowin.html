@@ -1,0 +1,1762 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoWIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+    body {
+        padding-top: 79px; 
+    }
+    
+    .header-logo img {
+        width: 60px;
+        height: auto;
+        object-fit: contain;
+        background: transparent;
+        opacity: .8;
+    }
+    .header-logo span {
+        display: block; 
+        white-space: normal;
+        color: white;
+        font-size: 12px;
+    }
+    
+    <!--for acheivement-->
+ 
+    .main-heading {
+        text-align: justify;
+        font-size: 35px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        line-height: 53px;
+        color: #000;
+        margin-top: 30px;
+        padding: 20px;
+        font-family: 'Roboto Condensed', sans-serif !important;
+    }
+    
+    .achievement-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px; 
+    }
+    
+    .achievement-info img {
+        width: 50px; 
+        margin-right: 10px; 
+    }
+    
+    .border-box {
+        border: 3px solid red; 
+        border-radius: 8px; 
+        padding: 10px; 
+        background-color: white;
+        margin-top: 20px; 
+        width: 550px;
+    }
+    
+    .quotes {
+        color: #000;
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+    .india{
+        height: 1000px;
+        width: 500px;
+        object-fit: contain;
+    }
+    <!--for double background slanted divisions-->
+
+    .covid-support {
+            padding: 0;
+            margin: 0;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+        /* Flex container to space out the left and right containers */
+.covid-support .d-flex {
+    display: flex;
+    justify-content: space-between; 
+    align-items: stretch; 
+    position: relative; 
+}
+
+/* Left Container - Dark Background */
+.left-container {
+    background-color: rgb(4, 138, 4);
+    color: white;
+    flex: 1; 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+/* Right Container - Light Background with Slant */
+.right-container {
+    background-color: rgb(115, 219, 219);
+    color: black;
+    flex: 1; 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Slanted Border on the Right Container */
+.right-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 80px solid rgb(4, 138, 4);
+    border-bottom: 200px solid transparent;
+    z-index: 1; 
+}
+
+/* Position the button across both containers */
+.btn-slant {
+    position: absolute;
+    top: 50%; 
+    left: 100%; 
+    transform: translateX(-50%) translateY(-50%); 
+    background-color: #ffc107;
+    border-color: #ffc107;
+    padding: 10px 20px;
+    z-index: 2; 
+    text-align: center;
+    width: 200px; 
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .d-flex {
+        flex-direction: column; 
+    }
+    .left-container, .right-container {
+        width: 100%;
+        height: auto; 
+        border-left: none;
+    }
+    .right-container::after {
+        display: none; 
+    }
+    .btn-slant {
+        position: relative;
+        margin-top: 20px; 
+        transform: none; 
+        left: 0; 
+    }
+}
+<!--for the cards used sections-->
+
+  .card {
+    
+        box-shadow: 0px 4px 12px whitesmoke;
+        border-radius: 10px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 250px;
+}
+
+
+/* Body of the card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    flex-grow: 1; 
+    background-color: #6c757d; 
+    color: white; 
+    padding: 20px;
+    height: 100px;
+}
+
+/* Footer of the card */
+.card-footer {
+    background-color: white;
+    padding: 10px 0; 
+    width: 100%;
+    height:75px ; 
+    margin-top: auto; 
+    
+}
+
+/* Optional: Styling for the card text */
+.card-text {
+    margin: 0;
+    padding: 10px;
+}
+
+.card-img-top {
+    
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    
+}
+.card-img-top img{
+    
+    height: 50%;
+    width: 50%;
+}
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;  
+    padding: 20px 0;
+    margin-left: -10px;
+}
+
+.arrow i {
+    color: #333;  
+}
+
+ 
+    .centered-dropdown {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .button[aria-expanded="true"] {
+        border-bottom: 3px solid #6c757d; 
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+    }
+    
+    #map {
+        height: 400px;
+    }
+    
+    .responsive-image {
+        width: 80%; 
+        height: auto;
+    }
+    
+    .video-thumbnail {
+        max-width: 400px; 
+        height: auto;
+        background-color: white;
+        border: 4px solid white; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px lightgray; 
+        overflow: hidden; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    }
+    
+    .video-thumbnail img {
+        width: 80%; 
+        border-radius: 10px; 
+        margin: 20px;
+    }
+    
+    .raise-an-issue {
+        width: 100vw;
+        height: auto;
+        background-color: #007c7c;
+        padding: 40px 0;
+    }
+    
+    .raise-an-issue h3 {
+        color: white;
+    }
+    
+    .content-box {
+        background-color: #f8f9fa;
+        width: 250px;
+        height: 200px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 10px; 
+    }
+    
+    .content-box h6 {
+        margin-bottom: 15px;
+        color: #007c7c;
+    }
+    
+    .content-box p {
+        font-size: 1rem;
+        color: #495057;
+    }
+    
+    .content-section {
+        padding: 40px 0;
+    }
+    
+   
+        
+
+    /* Ensure the FAQ image is responsive */
+.faq-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container for the FAQ section */
+.container {
+    max-width: 1200px;
+}
+
+/* Wrapper for the menu bar and arrows */
+.menu-bar-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-bar-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+/* Menu bar styling - Flexbox layout */
+.menu-bar {
+    display: flex;
+    gap: 20px; 
+    padding: 0;
+    align-items: center;
+    white-space: nowrap; 
+    flex-shrink: 0;
+}
+
+.menu-bar .btn {
+    background-color: transparent; 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap; 
+    min-width: 150px; 
+}
+
+/* Hover effect for buttons */
+.menu-bar .btn:hover {
+    border-bottom: 3px solid #555; 
+}
+/* Styling for active buttons */
+.menu-bar .btn.active,
+.menu-bar .btn:focus {
+    border-bottom: 3px solid #333;
+    box-shadow: none; 
+}
+/* Styling for the arrows */
+.menu-bar .arrow-btn {
+    font-size: 2rem; 
+    color: #007bff; 
+    cursor: pointer;
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 2; 
+}
+
+/* Left arrow - aligns to the left inside menu-bar-wrapper */
+.menu-bar .arrow-left {
+    left: 10px;
+}
+
+/* Right arrow - aligns to the right inside menu-bar-wrapper */
+.menu-bar .arrow-right {
+    right: 10px;
+}
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari, Edge, etc.) */
+.menu-bar-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Optional: On smaller screens, arrows should adjust */
+@media (max-width: 767px) {
+    .menu-bar .arrow-btn {
+        font-size: 1.5rem;
+    }
+    /* Optional: Adjust button padding or font size for smaller screens */
+    .menu-bar .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+/* Styling for the collapse links */
+.collapse a {
+    display: block;              
+    padding: 10px;               
+    color: #007bff;             
+    text-decoration: none;       
+    transition: background-color 0.3s ease;
+}
+.collapse a:hover {
+    background-color: #f0f0f0;    
+    color: #0056b3;              
+}
+
+/* Styling for the ordered list */
+.collapse ol {
+    padding-left: 20px;          
+    margin: 0;                    
+    list-style-type: decimal;     
+}
+
+/* Styling for individual list items */
+.collapse li {
+    margin-bottom: 10px;          
+}
+
+/* Make sure collapsible content has adequate padding */
+
+.accordion-item {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.925) !important; 
+}
+
+/* Change background color of the accordion button */
+.accordion-item .accordion-button {
+    background-color: rgba(255, 255, 255, 0.925)  !important; 
+    color: #000; 
+}
+
+/* Change background color of the button when expanded (active state) */
+.accordion-item .accordion-button:not(.collapsed) {
+    background-color: #e0a1a1; 
+}
+
+        /* Wrapper for both accordion columns (Single scrollbar for both columns) */
+        .accordion-wrapper {
+            display: flex;
+            height: 250px; 
+            overflow-y: scroll; 
+            width: 100%;
+            padding-right: 10px;
+            flex-wrap: nowrap;
+            
+        }
+       
+
+        /* Each accordion column */
+        .accordion-column {
+            flex: 1;
+            margin-right: 20px;
+            height: 100%; 
+        }
+
+        /* Remove right margin on the last column */
+        .accordion-column:last-child {
+            margin-right: 0;
+        }
+
+        /* Styling for accordion button */
+        .accordion-button {
+            font-size: 16px;
+        }
+
+       
+        /* Image column with fixed width */
+        .image-column {
+            flex: 0 0 250px;
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Optional: Make scrollbar visually clear */
+        .accordion-wrapper::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .accordion-wrapper::-webkit-scrollbar-thumb {
+            background-color: #888888;
+            border-radius: 10px;
+        }
+
+        .accordion-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .image-container{
+            position: relative;
+            width: 50px;
+            height: 50px;
+
+        }
+        .text-overlay{
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            color: white;
+        }
+        
+        
+        /* Styling for map */
+        .map-india {
+            height: 600px;
+            width: 600px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Form styling */
+        .form-container {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: green; /* Green label color */
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            color: white;
+            background-color: darkgreen;
+            margin-bottom: 15px;
+        }
+
+        /* Custom button styling */
+        .btn-custom {
+            background-color: white;
+            color: black;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 50px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px; 
+        }
+
+        .btn-custom:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+        /* Centering and layout adjustments */
+      
+        .partners-logo {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjust gap between logos */
+            margin-top: 20px;
+        }
+
+        .partners-logo img {
+            width: 150px;  
+            height: 100px;  
+            object-fit: contain;  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            border-radius: 8px;  
+            transition: box-shadow 0.3s ease; 
+        }
+
+        .partners-logo img:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .partner-main-image {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            font-weight: bold;
+        }
+
+        /* Button container below logos */
+        .partner-button-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        /* Ensuring buttons have consistent size */
+        .partner-button-container .btn {
+            width: 300px; 
+            height: 50px; 
+        }
+        footer {
+            background-color: rgb(7, 87, 76);
+            padding: 30px 0;
+        }
+
+        footer h6 {
+            margin: 10px;
+            padding: 20px;
+            color: rgb(204, 204, 218);
+            font-size: 16px;
+            font-weight: 700;
+            display: inline-block; 
+            position: relative;
+            white-space: nowrap; 
+            text-align: left; 
+        }
+
+        footer h6::after {
+            content: '';
+            display: block;
+            width: 30px; 
+            height: 2px; 
+            background-color: rgb(204, 204, 218); 
+            margin-top: 5px; 
+        }
+
+        footer a {
+            margin: 10px;
+            padding: 8px 0;
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f7f7f7; /* Light color when hovered */
+        }
+
+        footer p {
+            color: white;
+            font-size: 14px;
+        }
+
+        footer .col-md-2,
+        footer .col-md-3 {
+            padding: 0 15px;
+        }
+
+        footer .list-unstyled {
+            padding-left: 0;
+        }
+
+        footer .d-flex {
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px; /* Consistent space between labels */
+        }
+
+        footer .col-md-3 ul li {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-contact {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+            flex-wrap: wrap; 
+        }
+
+        footer .inline-text {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Ensure the color for spans is the same as h6 */
+        footer .inline-text span,
+        footer .footer-headings span {
+            color: rgb(204, 204, 218); 
+            font-size: 16px; 
+            font-weight: 700; 
+        }
+
+        /* Ensure headings in Support and Contact Us sections are aligned horizontally */
+        .footer-headings {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px; 
+        }
+
+        /* Darker background for the footer down part */
+        .footer-down-part {
+            background-color: rgb(5, 60, 54); 
+            padding: 20px 0;
+            color: rgb(204, 204, 218); 
+        }
+
+        .footer-down-part p {
+            text-align: left;
+            margin: 0;
+        }
+
+        .footer-down-part .col-md-4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-down-part .col-md-4 img {
+            max-height: 40px;
+            margin: 0 15px;
+        }
+
+        .footer-down-part .col-md-4 a {
+            color: rgb(204, 204, 218); 
+            font-size: 14px;
+            margin: 0 10px;
+        }
+
+       
+        .footer-pipe {
+            color: rgb(204, 204, 218); 
+            font-size: 20px; 
+            margin: 0 10px;
+        }
+        .support {
+            position: fixed;
+            right: 0;
+            bottom: 50%;
+            display: flex;
+            align-items: center;
+            padding: 10px 25px;
+            background-color: #28a745; 
+            color: white;
+            font-size: 16px;
+            border-radius: 50px 0 0 50px; 
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            overflow: hidden; 
+            width: 200px; 
+        }
+       
+
+        .support i {
+            margin-right: 20px !important; 
+        }
+
+        .support span {
+            font-size: 14px;
+            
+        }
+
+   
+    </style>
+    
+
+    
+</head>
+<body>
+    <header class="container-fluid fixed-top">
+        <div class="row bg-dark align-items-center">
+            <div class="col-9 header-logo ">
+                <a href="#" target="_blank" style="text-decoration: none;" class="d-flex align-items-center">
+                    <img src="image/1.png" alt="Logo">
+                    <span>Ministry of Health and<br> Family Welfare</span>
+                </a>
+            </div>
+            <div class="col-2">
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-light btn-sm me-2" aria-label="Increase font size">A+</button>
+                    <button class="btn btn-outline-light btn-sm me-2" aria-label="Default font size">A</button>
+                    <button class="btn btn-outline-light btn-sm me-2" aria-label="Decrease font size">A-</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle btn-sm" type="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select Language">
+                        English
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Hindi</a></li>
+                        <li><a class="dropdown-item" href="#">Malayalam</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-secondary">
+                <div class="container-fluid"> 
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="https://www.cowin.gov.in/assets/images/new-logo.svg" style="height: auto; width: 100px; object-fit: contain;" alt="CoWIN Logo">
+                    </a>
+                    
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white small" aria-current="page" href="#">ABHA (Health ID)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white small" href="#">DASHBOARD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white small" href="#">VERIFY CERTIFICATE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white small" href="#">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white small" href="#">PARTNERS</a>
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <!-- Register/Sign In Button aligned to the right -->
+                    <div class="d-flex ms-auto small">
+                        <button class="btn btn-outline-light rounded-pill" type="button">REGISTER/SIGN IN</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>  
+    
+         
+         <div class="container fluid" style="margin-top: 100px;">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h3 class="main-heading">Historic & Unparalleled Achievement!<br> India’s Glorious Journey of</h3>
+                        <div class="border-box">
+                          <div class="achievement-info">
+                              <img src="https://www.cowin.gov.in/assets/images/verified.svg" alt="Verified Icon">
+                              <h3 class=" fw-bolder fs-2 text-uppercase mt-3" style="color: orangered;">200 Crore Vaccinations</h3>
+                          </div>
+                      </div>
+                      <div>
+                          <h4 class="quotes">"India is set to defeat Covid-19. Every Indian is making it possible."<h4>
+                          <p style="font-size: large;">- PM Narendra Modi</p>
+                      </div>
+                    </div>
+                      
+                    <div class="col-md-3">
+                        <img class="india" src="https://www.cowin.gov.in/assets/images/independance.svg" alt="Independence Image">
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="covid-support cntainer-fluid">
+            <div class="d-flex">
+                <div class="left-container">
+                    <h5 class="mb-2">TOTAL VACCINATION DOSES</h5>
+                    <a href="#" class="btn btn-warning btn-slant rounded-pill">VIEW MORE</a>
+
+                </div>
+                <div class="right-container">
+                    <h5 class="mb-2">VACCINATIONS DONE TODAY</h5>
+                    <!-- Button on the slant -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <h3 class="text-center mt-4">Get Vaccinated in 3 Easy Steps</h3>
+            <div class="row d-flex justify-content-center align-items-center">
+                <!-- First Card -->
+                <div class="col-md-3 mt-2 d-flex justify-content-center align-items-center">
+                    <a href="#" style="text-decoration: none;">
+                        <div class="card text-center h-100 d-flex flex-column">
+                            <img class="card-img-top" src="https://www.cowin.gov.in/assets/images/Step_1.svg">
+                            <div class="card-body bg-gray text-white d-flex flex-column">
+                                <p class="card-text text-center">Book an Appointment on Co-WIN or Walk into any Nearest Vaccination Center</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <p class="card-text text-center">How to Book Your Appointment on Co-WIN?</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-1 arrow">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+        
+                <!-- Second Card -->
+                <div class="col-md-3 mt-2 d-flex justify-content-center align-items-center">
+                    <a href="#" style="text-decoration: none;">
+                        <div class="card text-center h-100 d-flex flex-column">
+                            <img class="card-img-top" src="https://www.cowin.gov.in/assets/images/Step_2.svg">
+                            <div class="card-body bg-gray text-white d-flex flex-column">
+                                <p class="card-text text-center">Get Your Vaccination Safely at the Time of Your Appointment</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <p class="card-text text-center">Dos and Don’ts for Getting Vaccination</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-1 arrow">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+        
+                <!-- Third Card -->
+                <div class="col-md-3 mt-2 d-flex justify-content-center align-items-center">
+                    <a href="#" style="text-decoration: none;">
+                        <div class="card text-center h-100 d-flex flex-column">
+                            <img class="card-img-top" src="https://www.cowin.gov.in/assets/images/Step_3.svg"">
+                            <div class="card-body bg-gray text-white d-flex flex-column">
+                                <p class="card-text text-center">Download Your Vaccination Certificate from Co-WIN and Wait for Dose #2</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <p class="text-center">Download Your Vaccination Certificate</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="container-fluid mt-5">
+            <h1 class="text-center fw-bolder">Search Your Nearest Vaccination Center</h1>
+            <p class="text-center ">Get a preview list of the nearest centers and check availability of vaccination slots
+                <br>
+                Login to book your slot</p>
+                <div class="button-container">
+                    <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="true" id="collapseButton1">By District</button>
+                    <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" id="collapseButton2">By PIN</button>
+                    <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#map" aria-expanded="false" id="collapseButton3">By Map</button>
+                </div>
+            
+                
+                <div class="row">
+                    <div class="col">
+                        <div id="collapseSection">
+                            <!-- By District Collapse (this will be shown by default) -->
+                            <div class="collapse show mt-3" id="multiCollapseExample1" data-bs-parent="#collapseSection">
+                                <div class="row mb-3">
+                                    <div class="col-md-4 centered-dropdown">
+                                        <div class="dropdown">
+                                            <button class="btn btn-white dropdown-toggle rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Select Your State
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Kerala</a></li>
+                                                <li><a class="dropdown-item" href="#">Karnataka</a></li>
+                                                <li><a class="dropdown-item" href="#">Assam</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dropdown">
+                                            <button class="btn btn-white dropdown-toggle rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Select Your District
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">District 1</a></li>
+                                                <li><a class="dropdown-item" href="#">District 2</a></li>
+                                                <li><a class="dropdown-item" href="#">District 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button class="btn btn-primary rounded-pill btn-lg" type="button">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            
+                            <div class="collapse mt-3" id="multiCollapseExample2" data-bs-parent="#collapseSection">
+                                <div class="row mb-3">
+                                    <div class="col mb-3">
+                                        <div class="dropdown">
+                                            <button class="btn btn-white dropdown-toggle rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Enter Your PIN
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">PIN 1</a></li>
+                                                <li><a class="dropdown-item" href="#">PIN 2</a></li>
+                                                <li><a class="dropdown-item" href="#">PIN 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <button class="btn btn-primary rounded-pill btn-lg" type="button">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            
+                            <div id="map" class="collapse mt-3" data-bs-parent="#collapseSection">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152175.2637691387!2d78.9628836298025!3d20.593684428892863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4f91eb09b0419%3A0x8f0f53b9db007f8f!2sIndia!5e0!3m2!1sen!2sus!4v1668451829050!5m2!1sen!2sus" 
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+        </div>
+
+
+        <div class="container container-fluid">
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Free COVID Precaution Dose</h3>
+                    <p>Now Precaution dose for 18-59 age group free at Government Vaccination Center.</p>
+                    <button class="btn btn-success btn-lg rounded-pill " type="button">Book Your Slot</button>
+                </div>
+                <div class="col-md-6">
+                    <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/free_covid_precaution_dose.svg">
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-6">
+                    <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/reports-aefi.svg">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Report Side Effect</h3>
+                    <p>If you have experienced any side effect after COVID-19 vaccination, it can be reported on Co-WIN using your registered mobile number.
+
+                    </p>
+                    <button class="btn btn-success btn-lg rounded-pill " type="button">Report Now</button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Children Vaccination</h3>
+                    <p>
+                        <ul>
+                            <li>Covovax vaccine is now available for Children of the age group 12+ yrs in Private Vaccination Center. The time span between first and second dose of Covovax is 21 days. Children can be administered with the second dose of Covovax within a month.</li>
+                            <li>Children of the age group 12-14 yrs are now eligible for the Corbevax vaccine in Government Vaccination Center and in Private Vaccination Center 12+ yrs. The period between a first and second dose of Corbevax is 28 days.</li>
+                            <li>Covaxin is available for Children of the age group of 15+ yrs in both Government and Private Vaccination Center. Children must be completed 4 to 6 weeks after administration of the first dose of Covaxin to take the second dose of Covaxin. Both online and walk-in are available.</li>
+                        </ul>
+                    </p>
+                    <button class="btn btn-success btn-lg rounded-pill " type="button">Book Your Slot</button>
+                </div>
+                <div class="col-md-6">
+                    <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/Children_Vaccination.svg">
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-6">
+                    <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/Date_Correction.svg">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">
+                        Vaccination Date Correction</h3>
+                    <p>If the date printed on your vaccination certificate differs from the actual date of vaccine administration, you may raise a request for correction of the same by submitting a valid proof of correct vaccination date.
+
+                    </p>
+                    <button class="btn btn-success btn-lg rounded-pill " type="button">Update Date</button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Precaution Dose</h3>
+                    <p>
+                        <ul>
+                            <li>All fully vaccinated adult citizens (18+ and have taken 2 doses) are eligible for precaution dose from 10/04/2022. Eligible citizens can avail precaution dose at any Government or Private Vaccination Center. Citizens should carry their Final Certificate of vaccination (with details of both earlier doses). Citizens should use the same mobile number and ID card used for earlier doses.</li>
+                            <li>HCWs, FLWs and Citizens aged 60 year or more, shall continue to receive precaution dose vaccination at any CVC, including free of charge vaccination at Government Vaccination Center.</li>
+                            <li>HCWs, FLWs and Citizens aged 60 year or more, shall continue to receive precaution dose vaccination at any CVC, including free of charge vaccination at Government Vaccination Center.</li>
+                        </ul>
+                        
+                    </p>
+                    <button class="btn btn-success btn-lg rounded-pill " type="button">Book Your Slot</button>
+                </div>
+                <div class="col-md-6">
+                    <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/Precaution_dose.svg">
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-6">
+                    
+                    <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/share_illustration.svg">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">
+                        Share Your Vaccination Status</h3>
+                    <p>Be a Fighter! If you are fully or partially vaccinated, you can now share your vaccination status in your social circle. Let's encourage our friends and followers in joining India's battle against COVID-19.
+
+                        
+
+                    </p>
+                    <button class="btn btn-success btn-lg rounded-pill " type="button">Share Your Status</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container container-fluid mt-4">
+            <h3 class="fw-bold text-center">ABHA (Health ID) and its Benefits</h3>
+            <p class="text-center">
+                ABHA (earlier known as Health ID) is an acronym for Ayushman Bharat Health Account. Using ABHA (Health ID) is the first step towards creating safer and efficient digital health records for you and your family. It enables your interaction with participating healthcare providers, and allows you to receive your digital lab reports, prescriptions, and diagnosis seamlessly from verified healthcare professionals and health service providers.
+            </p>
+            <div class="d-flex justify-content-center">
+                <div class="video-link me-3">
+                    <a href="https://youtu.be/5ZvLR1DcNBo?si=-R2QxwXVIEF-JC0l" target="_blank">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/5ZvLR1DcNBo/0.jpg" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+                <div class="video-link me-3">
+                    <a href="https://youtu.be/GV3cR7AwTL0?si=5qZQOHCmcrYkWuEs" target="_blank">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/GV3cR7AwTL0/0.jpg" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-4 mb-4">
+                <a href="#" class="btn btn-success btn-lg rounded-pill">Click Here to Know More</a>
+            </div>
+        </div>
+       
+
+        <!-- Raise an Issue Section -->
+    <div class="raise-an-issue container-fluid">
+        <div class="container>
+            <h3 class="fw-bold text-center text-white">Raise an Issue</h3>
+            <p class="text-center text-white">Raise an issue or solution to your Co-WIN account and vaccination certificate Issue instantly.</p>
+            
+            <div class="d-flex flex-wrap justify-content-between mt-5"> 
+                <div class="content-box">
+                    <a href="#" style="text-decoration: none;">
+                        <h6>Merge Certificates</h6>
+                    </a>
+                    <p>In case you have multiple certificates of Dose 1 generated from different accounts, you can merge them into the final vaccination certificate.</p>
+                </div>
+
+                <div class="content-box">
+                    <a href="#" style="text-decoration: none;">
+                        <h6>Add Passport</h6>
+                    </a>
+                    <p>You can link your passport to your vaccination certificate. By adding a passport to your vaccination certificate you can submit a request and get an international travel certificate.</p>
+                </div>
+
+                <div class="content-box">
+                    <a href="#" style="text-decoration: none;">
+                        <h6>Report Unknown Member</h6>
+                    </a>
+                    <p>f there are any unknown members are associated with your account, you can remove them from your account by reporting unknown members.</p>
+                </div>
+
+                <div class="content-box">
+                    <a href="#" style="text-decoration: none;">
+                        <h6>Transfer Member To New Member</h6>
+                    </a>
+                    <p>You can transfer members associated with your existing account to the new mobile number.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--Frequently asked questions-->
+ 
+
+       
+             
+        
+    <div class="container mt-5">
+        <h2 class="fw-bold text-center">Frequently Asked Questions</h2>
+        <div class="row mt-4">
+            <!-- First Column: Download Button and Image -->
+            <div class="col-md-3 mt-3">
+                <button class="btn btn-outline-dark btn-lg rounded-pill faq-button">
+                    <i class="bi bi-download"></i> Download
+                </button>
+                <img class="faq-image mt-3" src="https://www.cowin.gov.in/assets/images/faq_Section.svg" alt="CoWIN FAQ Section">
+            </div>
+    
+            <!-- Second Column: Horizontal Menu with Scrollable Items -->
+            <div class="col-md-9">
+                <div class="menu-bar-wrapper">
+                    <!-- Left Arrow -->
+                    <i class="bi bi-chevron-left arrow-btn arrow-left" id="left-arrow"></i>
+    
+                    <!-- Menu Bar with Buttons -->
+                    <div class="menu-bar-container">
+                        <div class="menu-bar">
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" id="collapseButton1">All</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" id="collapseButton2">Registration</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" id="collapseButton3">Vaccination Schedule</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" id="collapseButton4">Scheduling Vaccination-General</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" id="collapseButton5">Vaccination</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" id="collapseButton6">Vaccination Taken Outside Country</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" id="collapseButton7">Vaccination Certificates</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" id="collapseButton8">Report Side Effects</button>
+                            <button class="btn btn-white btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" id="collapseButton9">Report Issues</button>
+                        </div>
+                    </div>
+    
+                    <!-- Right Arrow -->
+                    <i class="bi bi-chevron-right arrow-btn arrow-right" id="right-arrow"></i>
+                </div>
+    
+                <!-- Collapsibles Section -->
+                <div id="collapseSectionOne">
+                    <!-- Collapse content for each section goes here -->
+                    <div class="collapse show" id="collapse1" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                    <div class="collapse" id="collapse2" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="collapse" id="collapse3" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                    <div class="collapse" id="collapse4" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                    <div class="collapse" id="collapse5" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                    <div class="collapse" id="collapse6" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                    <div class="collapse" id="collapse7" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                     +       <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                    <div class="collapse" id="collapse8" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                    <div class="collapse" id="collapse9" data-bs-parent="#collapseSectionOne">
+                        <ol>
+                            <li><a href="#" style="text-decoration: none;">Where can I register for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is there a mobile app that needs to be installed to register for vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Which age groups can register for vaccination on the Co-WIN portal?</a></li>
+                            <li><a href="#" style="text-decoration: none;">Is online registration mandatory for COVID-19 vaccination?</a></li>
+                            <li><a href="#" style="text-decoration: none;">How many people can be registered in the Co-WIN portal through one mobile number?</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <h2 class="fw-bolder mt-5 text-center">What's new on Co-WIN?</h2>
+        <div class="row mt-5">
+            <div class="col-md-8">
+                <!-- Wrapper for both accordion columns (Single scrollbar for both columns) -->
+                <div class="accordion-wrapper">
+                    <!-- First Accordion Column -->
+                    <div class="accordion-column" id="column1">
+                        <div class="accordion" id="whatsNewAccordion1">
+                            <!-- Accordion Item 1 -->
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse1" aria-expanded="true" aria-controls="accordionCollapse1">
+                                    <div class="image-container me-3">
+                                    <img src="https://www.cowin.gov.in/assets/images/numbering_new.svg" style="height: 50px; width: 50px;">
+                                    <div class="text-overlay">01</div>
+                                    </div>
+                                    New feature to report side effects after Covid-19 vaccination.</button>
+                                <div id="accordionCollapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#whatsNewAccordion1">
+                                    <div class="accordion-body">
+                                        <p>This new feature is added to Co-WIN which will allow you to report if there are any side effects after Covid-19 Vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More accordion items... -->
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse2" aria-expanded="true" aria-controls="accordionCollapse2">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">02</div>
+                                        </div>
+                                    Now you can book an appointment for ZyCoV-D vaccine</button>
+                                <div id="accordionCollapse2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#whatsNewAccordion1">
+                                    <div class="accordion-body">
+                                        <p>Users can now report adverse events after receiving the Covid-19 vaccination to help improve vaccine safety monitoring.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse3" aria-expanded="true" aria-controls="accordionCollapse3">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">03</div>
+                                        </div>
+                                    Covovax vaccine for Children</button>
+                                <div id="accordionCollapse3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#whatsNewAccordion1">
+                                    <div class="accordion-body">
+                                        <p>The updated Co-WIN portal now allows users to easily track their vaccination status, with a simplified user interface.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse4" aria-expanded="true" aria-controls="accordionCollapse4">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">04</div>
+                                        </div>
+                                    Precaution dose is now available for 18+ age group at both Government and Private Vaccination Center</button>
+                                <div id="accordionCollapse4" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#whatsNewAccordion1">
+                                    <div class="accordion-body">
+                                        <p>You can now reschedule your vaccination appointments through the Co-WIN platform in case of any scheduling conflicts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse5" aria-expanded="true" aria-controls="accordionCollapse5">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">05</div>
+                                        </div>
+                                    The new feature “Vaccination Date Correction” is added to Co-WIN</button>
+                                <div id="accordionCollapse5" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#whatsNewAccordion1">
+                                    <div class="accordion-body">
+                                        <p>Users can now download their vaccination certificates in multiple languages directly from the Co-WIN platform.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse6" aria-expanded="true" aria-controls="accordionCollapse6">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">06</div>
+                                        </div>
+                                    Introducing new vaccine Corbevax for Children</button>
+                                <div id="accordionCollapse6" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#whatsNewAccordion1">
+                                    <div class="accordion-body">
+                                        <p>Newly enhanced features make it easier to search for vaccination centers and find available slots near you.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse7" aria-expanded="true" aria-controls="accordionCollapse7">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">07</div>
+                                        </div>
+                                    Now you can book an appointment for ZyCoV-D vaccine</button>
+                                <div id="accordionCollapse7" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#whatsNewAccordion1">
+                                    <div class="accordion-body">
+                                        <p>Users will now receive SMS notifications for any changes in their vaccination status or appointments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Accordion Column -->
+                    <div class="accordion-column" id="column2">
+                        <div class="accordion" id="whatsNewAccordion2">
+                            <!-- Accordion Item 8 -->
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse8" aria-expanded="true" aria-controls="accordionCollapse8">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">08</div>
+                                        </div>
+                                    HCW/FLW and Citizens in 60+ age group can now avail Precaution Dose</button>
+                                <div id="accordionCollapse8" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#whatsNewAccordion2">
+                                    <div class="accordion-body">
+                                        <p>The FAQ section has been updated to reflect the latest guidelines on Covid-19 vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse9" aria-expanded="true" aria-controls="accordionCollapse8">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">09</div>
+                                        </div>
+                                    Vaccine available for age group 15-18 yrs</button>
+                                <div id="accordionCollapse8" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#whatsNewAccordion2">
+                                    <div class="accordion-body">
+                                        <p>The FAQ section has been updated to reflect the latest guidelines on Covid-19 vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse10" aria-expanded="true" aria-controls="accordionCollapse10">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">10</div>
+                                        </div>
+                                    New feature to Share Your Vaccination Status on different social media platforms</button>
+                                <div id="accordionCollapse9" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#whatsNewAccordion2">
+                                    <div class="accordion-body">
+                                        <p>The FAQ section has been updated to reflect the latest guidelines on Covid-19 vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse11" aria-expanded="true" aria-controls="accordionCollapse11">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">11</div>
+                                        </div>
+                                    You can download your vaccination certificate for International Travel</button>
+                                <div id="accordionCollapse9" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#whatsNewAccordion2">
+                                    <div class="accordion-body">
+                                        <p>The FAQ section has been updated to reflect the latest guidelines on Covid-19 vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse12" aria-expanded="true" aria-controls="accordionCollapse12">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">12</div>
+                                        </div>
+                                    Citizens can link their passports to Co-WIN issued certificate by raising an issue in their accounts</button>
+                                <div id="accordionCollapse9" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#whatsNewAccordion2">
+                                    <div class="accordion-body">
+                                        <p>The FAQ section has been updated to reflect the latest guidelines on Covid-19 vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse13" aria-expanded="true" aria-controls="accordionCollapse13">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">13</div>
+                                        </div>
+                                    Introducing “Raise an Issue” to Co-WIN for all your vaccine certificate and account related issues</button>
+                                <div id="accordionCollapse9" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#whatsNewAccordion2">
+                                    <div class="accordion-body">
+                                        <p>The FAQ section has been updated to reflect the latest guidelines on Covid-19 vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse14" aria-expanded="true" aria-controls="accordionCollapse14">
+                                    <div class="image-container me-3">
+                                        <img src="https://www.cowin.gov.in/assets/images/numbering.svg" style="height: 50px; width: 50px;">
+                                        <div class="text-overlay">14</div>
+                                        </div>
+                                    Check your eligibility for Dose 2 by signing in on Co-WIN with your registered mobile number</button>
+                                <div id="accordionCollapse9" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#whatsNewAccordion2">
+                                    <div class="accordion-body">
+                                        <p>The FAQ section has been updated to reflect the latest guidelines on Covid-19 vaccination.</p>
+                                    </div>
+                                </div>
+                            </div>
+                           
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2 image-column">
+                <img src="https://www.cowin.gov.in/assets/images/what's_new_on_cowin.svg" alt="What's New on Co-WIN">
+            </div>
+        </div>
+    </div>
+
+
+                <!-- vaccination drive with map -->
+
+
+    <div class="container-fluid">
+        <h2 class="text-center ew-bolder">India's Vaccination Drive: The World's Largest</h2>
+
+        <div class="row justify-content-center">
+            <!-- First column for form -->
+            <div class="col-md-3 mb-4">
+                <!-- Form with Green Labels and Background -->
+                <div class="form-container">
+                    <form>
+                        <fieldset>
+                            <label for="vaccinationDelivered">Vaccination Delivered</label>
+                            <input id="vaccinationDelivered" type="text" value="+0" readonly>
+
+                            <label for="citizensVaccinated">Citizens Fully Vaccinated</label>
+                            <input id="citizensVaccinated" type="text" value="0 +0" readonly>
+
+                            <label for="vaccinationPercentage">% of Fully Vaccinated</label>
+                            <input id="vaccinationPercentage" type="text" value="0%" readonly>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Second column for map -->
+            <div class="col-md-6 mb-4">
+                <img class="map-india" src="https://media.gettyimages.com/id/1147562559/vector/india-map.jpg?s=2048x2048&w=gi&k=20&c=MlZhUp4fb592g7ku8wm-N_ZqJcjJ7JSuQg4qv_VeRu8=" alt="Map of India">
+            </div>
+
+            <!-- Third column for button -->
+            <div class="col-md-3 mb-4">
+                <!-- Button at the top of the third column -->
+                <a class="btn btn-custom btn-outline-success" href="#" target="_blank">View Vaccination Dashboard</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- our partners-->
+    <div class="container-fluid mt-5">
+        <h2 class="text-center fw-bolder">Our Partners</h2>
+        <div class="row mt-5">
+            <div class="col-md-3 mb-4 text-center">
+                <img class="partner-main-image" src="https://www.cowin.gov.in/assets/images/partners_page.svg" alt="CoWIN Partners Page">
+            </div>
+
+            <div class="col-md-9">
+                <!-- Partner Logos Row -->
+                <div class="partners-logo">
+                    <img src="https://www.cowin.gov.in/assets/images/digilocker_new_Logo.svg" alt="Digilocker Logo">
+                    <img src="https://www.cowin.gov.in/assets/images/umang_new_logo.svg" alt="UMANG Logo">
+                    <img src="https://www.cowin.gov.in/assets/images/arogya_setu_logo1.svg" alt="Arogya Setu Logo">
+                    <img src="https://www.cowin.gov.in/assets/images/my_gov_new_logo.svg" alt="MyGov Logo">
+                </div>
+
+                <!-- Button Container -->
+                <div class="partner-button-container">
+                    <button class="btn btn-success rounded-pill btn-lg">View More</button>
+                    <button class="btn btn-outline-success rounded-pill btn-lg">Register As Partners</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+    <footer class="py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <h6>Vaccination Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Register Members</a></li>
+                        <li><a href="#">Search Vaccination Centers</a></li>
+                        <li><a href="#">Book Vaccination Slots</a></li>
+                        <li><a href="#">Manage Appointment</a></li>
+                        <li><a href="#">Download Certificate</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Platforms</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Co-WIN International</a></li>
+                        <li><a href="#">Vaccinator</a></li>
+                        <li><a href="#">Department Login</a></li>
+                        <li><a href="#">Verify Certificates</a></li>
+                        <li><a href="#">Vaccination Statistics</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">How To Get Vaccinated</a></li>
+                        <li><a href="#">Dos and Don'ts</a></li>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">API Guidelines</a></li>
+                        <li><a href="#">Grievance Guidelines</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Support Section -->
+                <div class="col-md-3">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#">Certificate Corrections</a></li>
+                        <div class="footer-headings">
+                            <span>CHILD</span>
+                            <span>Mental Health</span>
+                        </div>
+                        <div class="footer-contact">
+                            <a href="#">1098</a>
+                            <a href="#">08046110007</a>
+                        </div>
+                    </ul>
+                </div>
+    
+                <!-- Contact Us Section -->
+                <div class="col-md-3">
+                    <h6>Contact Us</h6>
+                    <ul class="list-unstyled">
+                        <li><p>Helpline: <a href="#">+91-11-23978046 (Toll Free - 1075)</a></p></li>
+                        <li><p>Technical Helpline: <a href="#">0120-4783222</a></p></li>
+                        <div class="footer-headings">
+                            <span>Senior Citizens</span>
+                            <span>Now</span>
+                        </div>
+                        <div class="footer-contact">
+                            <a href="#">14567</a>
+                            <a href="#">7827170170</a>
+                        </div>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+      </footer>
+    
+      <!-- Footer Down Part -->
+      <div class="footer-down-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright © 2021 Co-WIN. All Rights Reserved</p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <a href="#"><img src="https://www.cowin.gov.in/assets/images/national-health-authority.jpg" class="img-fluid"></a>
+                    <a href="#">        <img src="data:image/png;base64,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" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <a href="#">Terms of Service</a>
+                    <span class="footer-pipe">&#124;</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+          <!-- call section-->
+        <div class="support">
+            <i class="bi bi-telephone-fill"></i>
+            <span>Support for Covid-19</span>
+        </div>
+
+    
+    <!-- Include Bootstrap Bundle with JS for Bootstrap functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript for Scrollable Arrows -->
+    <script>
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+        const menuBarContainer = document.querySelector('.menu-bar-container');
+        
+        const scrollAmount = 200; // Scroll by 200px at a time
+    
+        // Handle Left Arrow Click
+        leftArrow.addEventListener('click', function() {
+            menuBarContainer.scrollBy({
+                left: -scrollAmount, // Scroll left by the specified amount
+                behavior: 'smooth'   // Smooth scroll effect
+            });
+        });
+    
+        // Handle Right Arrow Click
+        rightArrow.addEventListener('click', function() {
+            menuBarContainer.scrollBy({
+                left: scrollAmount,  // Scroll right by the specified amount
+                behavior: 'smooth'   // Smooth scroll effect
+            });
+        });
+    </script>
+    
+
+    </body>
+    </html>
+
+    
+         
