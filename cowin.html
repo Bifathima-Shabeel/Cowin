@@ -11,7 +11,9 @@
     body {
         padding-top: 79px; 
     }
-    
+    header{
+        background-color: rgb(4,93,93);
+    }
     .header-logo img {
         width: 60px;
         height: auto;
@@ -53,7 +55,7 @@
     }
     
     .border-box {
-        border: 3px solid red; 
+        border: 3px solid #fd5428; 
         border-radius: 8px; 
         padding: 10px; 
         background-color: white;
@@ -93,7 +95,7 @@
 
 /* Left Container - Dark Background */
 .left-container {
-    background-color: rgb(4, 138, 4);
+    background-color: rgb(0,124,124);
     color: white;
     flex: 1; 
     padding: 20px;
@@ -105,7 +107,7 @@
 
 /* Right Container - Light Background with Slant */
 .right-container {
-    background-color: rgb(115, 219, 219);
+    background-color: rgb(4,196,196);
     color: black;
     flex: 1; 
     padding: 20px;
@@ -136,7 +138,7 @@
     left: 100%; 
     transform: translateX(-50%) translateY(-50%); 
     background-color: #ffc107;
-    border-color: #ffc107;
+    border: 2px solid white;
     padding: 10px 20px;
     z-index: 2; 
     text-align: center;
@@ -145,7 +147,7 @@
 
 .btn-warning {
     background-color: #ffc107;
-    border-color: #ffc107;
+    border: 2px solid white;
 }
 
 /* Responsive Adjustments */
@@ -189,7 +191,7 @@
     flex-direction: column;
     justify-content: center; 
     flex-grow: 1; 
-    background-color: #6c757d; 
+    background-color: rgb(0,124,124); 
     color: white; 
     padding: 20px;
     height: 100px;
@@ -282,7 +284,7 @@
     .raise-an-issue {
         width: 100vw;
         height: auto;
-        background-color: #007c7c;
+        background-color: rgb(0,124,124);
         padding: 40px 0;
     }
     
@@ -558,7 +560,7 @@
             border-radius: 8px;
             font-size: 16px;
             color: white;
-            background-color: darkgreen;
+            background-color: rgb(0,124,124);
             margin-bottom: 15px;
         }
 
@@ -631,7 +633,7 @@
             height: 50px; 
         }
         footer {
-            background-color: rgb(7, 87, 76);
+            background-color: rgb(0,124,124);
             padding: 30px 0;
         }
 
@@ -652,7 +654,7 @@
             display: block;
             width: 30px; 
             height: 2px; 
-            background-color: rgb(204, 204, 218); 
+            background-color:  rgb(0,124,124); 
             margin-top: 5px; 
         }
 
@@ -724,7 +726,7 @@
 
         /* Darker background for the footer down part */
         .footer-down-part {
-            background-color: rgb(5, 60, 54); 
+            background-color: rgb(1,81,88); 
             padding: 20px 0;
             color: rgb(204, 204, 218); 
         }
@@ -794,7 +796,7 @@
 </head>
 <body>
     <header class="container-fluid fixed-top">
-        <div class="row bg-dark align-items-center">
+        <div class="row align-items-center">
             <div class="col-9 header-logo ">
                 <a href="#" target="_blank" style="text-decoration: none;" class="d-flex align-items-center">
                     <img src="image/1.png" alt="Logo">
@@ -873,7 +875,7 @@
                         <div class="border-box">
                           <div class="achievement-info">
                               <img src="https://www.cowin.gov.in/assets/images/verified.svg" alt="Verified Icon">
-                              <h3 class=" fw-bolder fs-2 text-uppercase mt-3" style="color: orangered;">200 Crore Vaccinations</h3>
+                              <h3 class=" fw-bolder fs-2 text-uppercase mt-3" style="color: #fd5428;">200 Crore Vaccinations</h3>
                           </div>
                       </div>
                       <div>
@@ -1054,7 +1056,7 @@
                 <div class="col-md-6">
                     <h3 class="fw-bolder">Free COVID Precaution Dose</h3>
                     <p>Now Precaution dose for 18-59 age group free at Government Vaccination Center.</p>
-                    <button class="btn btn-success btn-lg rounded-pill " type="button">Book Your Slot</button>
+                    <button class="btn btn-lg rounded-pill " type="button" style="color: white; background-color: rgb(0,124,124);">Book Your Slot</button>
                 </div>
                 <div class="col-md-6">
                     <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/free_covid_precaution_dose.svg">
@@ -1070,7 +1072,7 @@
                     <p>If you have experienced any side effect after COVID-19 vaccination, it can be reported on Co-WIN using your registered mobile number.
 
                     </p>
-                    <button class="btn btn-success btn-lg rounded-pill " type="button">Report Now</button>
+                    <button class="btn btn-lg rounded-pill " type="button" style="color: white; background-color: rgb(0,124,124);">Report Now</button>
                 </div>
             </div>
             <div class="row mt-3">
@@ -1083,7 +1085,7 @@
                             <li>Covaxin is available for Children of the age group of 15+ yrs in both Government and Private Vaccination Center. Children must be completed 4 to 6 weeks after administration of the first dose of Covaxin to take the second dose of Covaxin. Both online and walk-in are available.</li>
                         </ul>
                     </p>
-                    <button class="btn btn-success btn-lg rounded-pill " type="button">Book Your Slot</button>
+                    <button class="btn btn-lg rounded-pill " type="button" style="color: white; background-color: rgb(0,124,124);">Book Your Slot</button>
                 </div>
                 <div class="col-md-6">
                     <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/Children_Vaccination.svg">
@@ -1100,7 +1102,7 @@
                     <p>If the date printed on your vaccination certificate differs from the actual date of vaccine administration, you may raise a request for correction of the same by submitting a valid proof of correct vaccination date.
 
                     </p>
-                    <button class="btn btn-success btn-lg rounded-pill " type="button">Update Date</button>
+                    <button class="btn btn-lg rounded-pill " type="button" style="color: white; background-color: rgb(0,124,124);">Update Date</button>
                 </div>
             </div>
             <div class="row mt-3">
@@ -1114,7 +1116,7 @@
                         </ul>
                         
                     </p>
-                    <button class="btn btn-success btn-lg rounded-pill " type="button">Book Your Slot</button>
+                    <button class="btn btn-lg rounded-pill " type="button" style="color: white; background-color: rgb(0,124,124);">Book Your Slot</button>
                 </div>
                 <div class="col-md-6">
                     <img class="responsive-image" src="https://www.cowin.gov.in/assets/images/Precaution_dose.svg">
@@ -1134,7 +1136,7 @@
                         
 
                     </p>
-                    <button class="btn btn-success btn-lg rounded-pill " type="button">Share Your Status</button>
+                    <button class="btn btn-lg rounded-pill " type="button" style="color: white; background-color: rgb(0,124,124);">Share Your Status</button>
                 </div>
             </div>
         </div>
@@ -1162,21 +1164,21 @@
                 </div>
             </div>
             <div class="text-center mt-4 mb-4">
-                <a href="#" class="btn btn-success btn-lg rounded-pill">Click Here to Know More</a>
+                <a href="#" class="btn btn-lg rounded-pill"style="color: white; background-color: rgb(0,124,124);">Click Here to Know More</a>
             </div>
         </div>
        
 
         <!-- Raise an Issue Section -->
     <div class="raise-an-issue container-fluid">
-        <div class="container>
+        <div class="container">
             <h3 class="fw-bold text-center text-white">Raise an Issue</h3>
             <p class="text-center text-white">Raise an issue or solution to your Co-WIN account and vaccination certificate Issue instantly.</p>
             
             <div class="d-flex flex-wrap justify-content-between mt-5"> 
                 <div class="content-box">
-                    <a href="#" style="text-decoration: none;">
-                        <h6>Merge Certificates</h6>
+                    <a href="#" style[]="text-decoration: none;">
+                        <h6>Merge Cert[ificates</h6>
                     </a>
                     <p>In case you have multiple certificates of Dose 1 generated from different accounts, you can merge them into the final vaccination certificate.</p>
                 </div>
@@ -1618,7 +1620,7 @@
 
                 <!-- Button Container -->
                 <div class="partner-button-container">
-                    <button class="btn btn-success rounded-pill btn-lg">View More</button>
+                    <button class="btn rounded-pill btn-lg" style="color: white; background-color: rgb(0,124,124);">View More</button>
                     <button class="btn btn-outline-success rounded-pill btn-lg">Register As Partners</button>
                 </div>
             </div>
